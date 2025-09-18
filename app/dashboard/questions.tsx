@@ -76,7 +76,7 @@ export default function QuestionsContent() {
 				setQuestions(questions!.map(l => l.id === result.id ? result : l))
 			}
 		} else {
-			const result = await createQuestionAction(currentLesson!.id, new FormData(e.target as any))
+			const result = await createQuestionAction(currentLesson!.id, new FormData(e.currentTarget))
 			if (result) {
 				setQuestions([...questions!, result])
 			}
@@ -228,7 +228,7 @@ export default function QuestionsContent() {
 									<tr><td colSpan={6} className="text-red-500 text-center py-8">Une erreur est survenue <span className="text-blue-400 cursor-pointer" onClick={handleFetchQuestions}>Reessayer</span></td></tr>
 								)
 									: questions!.length === 0 ? (
-										<tr><td colSpan={6} className="text-center py-8">Aucune Questions n'a ete cree pour l'instant</td></tr>
+										<tr><td colSpan={6} className="text-center py-8">Aucune Questions n&apos;a ete cree pour l&apos;instant</td></tr>
 									)
 										:
 

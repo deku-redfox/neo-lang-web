@@ -77,7 +77,7 @@ export default function LessonsContent() {
 				setLessons(lessons!.map(l => l.id === result.id ? result : l))
 			}
 		} else {
-			const result = await createLessonAction(langId, new FormData(e.target as any), icon!)
+			const result = await createLessonAction(langId, new FormData(e.currentTarget), icon!)
 			if (result) {
 				setLessons([...lessons!, result])
 			}
@@ -191,7 +191,7 @@ export default function LessonsContent() {
 										<tr><td colSpan={4} className="text-red-500 text-center py-8">Une erreur est survenue <span className="text-blue-400 cursor-pointer" onClick={handleFetchLessons}>Reessayer</span></td></tr>
 									)
 										: lessons!.length === 0 ? (
-											<tr><td colSpan={4} className="text-center py-8">Aucune Lessons n'a ete cree pour l'instant</td></tr>
+											<tr><td colSpan={4} className="text-center py-8">Aucune Lessons n&apos;a ete cree pour l&apos;instant</td></tr>
 										)
 											: lessons!.map((lesson) => {
 												return (

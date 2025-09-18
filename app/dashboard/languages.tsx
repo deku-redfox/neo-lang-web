@@ -183,7 +183,7 @@ export default function LanguagesContent() {
 									<tr><td colSpan={4} className="text-red-500 text-center py-8">Une erreur est survenue <span className="text-blue-400 cursor-pointer" onClick={handleFetchLanguages}>Reessayer</span></td></tr>
 								)
 								: languages!.length === 0 ? (
-									<tr><td colSpan={4} className="text-center py-8">Aucune Langue n'a ete cree pour l'instant</td></tr>
+									<tr><td colSpan={4} className="text-center py-8">Aucune Langue n&apos;a ete cree pour l&apos;instant</td></tr>
 								)
 								: languages!.map((language) => (
 									<tr key={language.id}>

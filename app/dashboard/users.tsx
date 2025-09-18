@@ -39,7 +39,7 @@ export default function UsersContent() {
 							<tr>
 								<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Utilisateur</th>
 								<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-								<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date d'inscription</th>
+								<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date d&apos;inscription</th>
 								<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Statut</th>
 								<th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
 							</tr>
@@ -53,7 +53,7 @@ export default function UsersContent() {
 									<tr><td colSpan={5} className="text-red-500 text-center py-8">Une erreur est survenue <span className="text-blue-400 cursor-pointer" onClick={handleFetchUsers}>Reessayer</span></td></tr>
 								)
 								: users!.length === 0 ? (
-									<tr><td colSpan={5} className="text-center py-8">Aucun User n'a ete cree pour l'instant</td></tr>
+									<tr><td colSpan={5} className="text-center py-8">Aucun User n&apos;a ete cree pour l&apos;instant</td></tr>
 								)							
 								: users!.map((user) => (
 									<tr key={user.id}>

@@ -47,7 +47,7 @@ export default function Home() {
               Apprenez où que vous soyez
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Notre plateforme s'adapte à votre mode de vie avec des applications mobile et web synchronisées.
+              Notre plateforme s&apos;adapte à votre mode de vie avec des applications mobile et web synchronisées.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Home() {
                 <Monitor className="h-8 w-8 text-highlight" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Version Web</h3>
-              <p className="text-gray-600">Interface complète pour une expérience d'apprentissage optimale</p>
+              <p className="text-gray-600">Interface complète pour une expérience d&apos;apprentissage optimale</p>
             </div>
 
             <div className="text-center p-6">
@@ -86,7 +86,7 @@ export default function Home() {
             Prêt à commencer votre apprentissage ?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Rejoignez des milliers d'apprenants qui maîtrisent déjà de nouvelles langues
+            Rejoignez des milliers d&apos;apprenants qui maîtrisent déjà de nouvelles langues
           </p>
           <Link href='/auth?form=register'
             className="bg-white text-highlight hover:bg-gray-100 px-8 py-3 rounded-lg text-lg font-bold inline-flex items-center"
@@ -118,7 +118,7 @@ const NavBar = function () {
             <Link href='/auth?form=register'
               className="bg-highlight-second text-white hover:bg-highlight-second/40 px-4 py-2 rounded-md text-sm font-bold"
             >
-              S'inscrire
+              S&apos;inscrire
             </Link>
           </div>
         </div>
