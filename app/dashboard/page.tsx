@@ -19,9 +19,5 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
 	}
 	const currentPage = pages[view ?? 'languages']
 
-	return (
-		<Suspense>
-			<currentPage.component />
-		</Suspense>
-	)
+	return <currentPage.component />
 }

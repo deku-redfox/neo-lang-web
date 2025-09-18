@@ -8,9 +8,17 @@ import QuestionProps from "@/models/question";
 import { Edit3, Plus, Trash2 } from "lucide-react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, Suspense, useEffect, useState } from "react";
 
-export default function QuestionsContent() {
+export default function QuestionsContentSuspense() {
+	return (
+		<Suspense>
+			<QuestionsContent />
+		</Suspense>
+	)
+}
+
+function QuestionsContent() {
 	const langId = parseInt(useSearchParams().get('lang') ?? '0')
 	const langName = useSearchParams().get('lang-name') ?? ''
 	const lessonId = parseInt(useSearchParams().get('lesson') ?? '0')

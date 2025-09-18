@@ -9,9 +9,17 @@ import { Edit3, Plus, Trash2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, Suspense, useEffect, useState } from "react";
 
-export default function LessonsContent() {
+export default function LessonsContentSuspense() {
+	return (
+		<Suspense>
+			<LessonsContent />
+		</Suspense>
+	)
+}
+
+function LessonsContent() {
 	const langId = parseInt(useSearchParams().get('lang') ?? '0')
 
 	const [showLessonForm, setShowLessonForm] = useState<boolean>(false)
