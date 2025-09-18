@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react"
 import { Header, Sidebar } from "./navigation"
 import { SidebarProvider } from "./siidebar-context"
 
@@ -7,9 +8,13 @@ export default function DashboardLayout({ children } : Readonly<{ children: Reac
     return (
         <SidebarProvider>
             <div className="flex h-screen bg-gray-100">
-                <Sidebar />
+                <Suspense>
+                    <Sidebar />
+                </Suspense>
                 <div className="flex-1 flex flex-col overflow-hidden">
-                    <Header />
+                    <Suspense>
+                        <Header />
+                    </Suspense>
                     <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
                         {children}
                     </main>
