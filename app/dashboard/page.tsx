@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import LanguagesContent from './languages';
 import LessonsContent from './lessons';
 import QuestionsContent from './questions';
@@ -18,5 +19,9 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
 	}
 	const currentPage = pages[view ?? 'languages']
 
-	return <currentPage.component />
+	return (
+		<Suspense>
+			<currentPage.component />
+		</Suspense>
+	)
 }

@@ -3,13 +3,21 @@
 import { Globe } from 'lucide-react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useActionState, useEffect } from 'react';
+import { Suspense, useActionState, useEffect } from 'react';
 import { loginAction, LoginState, registerAction, RegisterState } from '@/actions';
 import LoadingImg from '@/components/loading-img';
 
 
 export default function AuthPage() {
-  const searchs = useSearchParams();
+  return (
+    <Suspense>
+      <AuthContent />
+    </Suspense>
+  )
+}
+
+function AuthContent() {
+  const searchs = useSearchParams()
   const form = searchs.get('form') ?? 'register'
 
   if (form === 'login') return <Login />
