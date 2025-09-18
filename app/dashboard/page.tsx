@@ -9,8 +9,8 @@ type SearchParamsProps = {
 	item: string | undefined
 }
 
-export default async function Dashboard({ searchParams }: { searchParams: Promise<SearchParamsProps> }) {
-	const { view } = await searchParams
+export default async function Dashboard() {
+	const view  = 'languages'
 	const pages = {
 		languages: {title: 'Gestion des Langues', component: LanguagesContent},
 		lessons: {title: 'Gestion des Lecons', component: LessonsContent},
